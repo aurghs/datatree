@@ -380,7 +380,7 @@ class DataTree(
             if existing_node is not None:
                 if isinstance(value, Dataset):
                     # replace whole dataset
-                    existing_node.ds = Dataset
+                    existing_node.ds = value
                 elif isinstance(value, (DataArray, Variable)):
                     if not existing_node.has_data:
                         # promotes da to ds
